@@ -27,7 +27,9 @@ class FusionCharts:
       FusionCharts.constructorOptions['renderAt'] = renderAt
       FusionCharts.constructorOptions['dataFormat'] = dataFormat
       FusionCharts.constructorOptions['dataSource'] = dataSource
-      
+   
+   # render the chart created
+   # It prints a script and calls the FusionCharts javascript render method of created chart   
    def render(self):
     self.readyJson = json.dumps(FusionCharts.constructorOptions)
     self.readyJson = FusionCharts.constructorTemplate.replace('__constructorOptions__', self.readyJson)
@@ -39,6 +41,6 @@ class FusionCharts:
       self.readyJson = self.readyJson.replace('\\', '')
       self.readyJson = self.readyJson.replace('"{', "{")
       self.readyJson = self.readyJson.replace('}"', "}")
-      
+
     return self.readyJson
  

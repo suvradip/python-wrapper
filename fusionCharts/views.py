@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from fcWrapper import FusionCharts
+from fusioncharts import FusionCharts
 
 # Create your views here.
 
