@@ -1,8 +1,8 @@
 from django.http import HttpResponse
 import json
 
+#Common base class for FC
 class FusionCharts:
-   'Common base class for FC'
 
    constructorOptions = {}
    constructorTemplate = """
@@ -26,12 +26,19 @@ class FusionCharts:
       FusionCharts.constructorOptions['height'] = height
       FusionCharts.constructorOptions['renderAt'] = renderAt
       FusionCharts.constructorOptions['dataFormat'] = dataFormat
-      dataSource = json.loads(dataSource)
       FusionCharts.constructorOptions['dataSource'] = dataSource
-  
+      
    def render(self):
-    prepJson = json.dumps(FusionCharts.constructorOptions)
-    prepJson = FusionCharts.constructorTemplate.replace('__constructorOptions__', prepJson)
-    prepJson = prepJson + FusionCharts.renderTemplate.replace('__chartId__', FusionCharts.constructorOptions['id'])
-    return prepJson
+    self.readyJson = json.dumps(FusionCharts.constructorOptions)
+    self.readyJson = FusionCharts.constructorTemplate.replace('__constructorOptions__', self.readyJson)
+    self.readyJson = self.readyJson + FusionCharts.renderTemplate.replace('__chartId__', FusionCharts.constructorOptions['id'])
+    self.readyJson = self.readyJson.replace('\\n', '')
+    self.readyJson = self.readyJson.replace('\\t', '')
+
+    if(FusionCharts.constructorOptions['dataFormat'] == 'json'):
+      self.readyJson = self.readyJson.replace('\\', '')
+      self.readyJson = self.readyJson.replace('"{', "{")
+      self.readyJson = self.readyJson.replace('}"', "}")
+      
+    return self.readyJson
  
