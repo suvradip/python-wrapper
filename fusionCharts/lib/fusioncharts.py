@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 import json
 
-#Common base class for FC
+# Common base class for FC
 class FusionCharts:
 
    constructorOptions = {}
@@ -18,7 +18,7 @@ class FusionCharts:
          });
      </script>
    """
-
+   # constructor
    def __init__(self, type, id, width, height, renderAt, dataFormat, dataSource):    
       FusionCharts.constructorOptions['type'] = type
       FusionCharts.constructorOptions['id'] = id
@@ -41,6 +41,6 @@ class FusionCharts:
       self.readyJson = self.readyJson.replace('\\', '')
       self.readyJson = self.readyJson.replace('"{', "{")
       self.readyJson = self.readyJson.replace('}"', "}")
-
+      
     return self.readyJson
  
