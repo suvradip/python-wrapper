@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'fusionCharts'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -123,5 +124,3 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "fusionCharts/static"),
     #'/var/www/static/',
 ]
-
-print BASE_DIR
