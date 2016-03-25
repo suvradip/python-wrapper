@@ -88,34 +88,3 @@ def xmlurl(request):
 	return render(request, 'index.html', {'output': bar2d.render()}) 		 
 
 
-def test(request):
-	data = [
-	'Shanghai',
-	'9696300',
-	'Peking',
-	'7472000',
-	'Chongqing',
-	'6351600',
-	'Tianjin',
-	'5286800',
-	'Wuhan',
-	'4344600',
-	'Harbin',
-	'4289800',
-	'Shenyang',
-	'4265200',
-	'Kanton [Guangzhou]',
-	'4256300',
-	'Chengdu',
-	'3361500',
-	'Nanking [Nanjing]',
-	'2870300'
-	]
-	d = data.__iter__()
-
-	for i in d:
-		t = City(Name=i, CountryCode='001', Population=d.next())
-		t.save()
-
-	return render(request, 'index.html')
-

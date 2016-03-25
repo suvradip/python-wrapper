@@ -3,7 +3,6 @@ from django.db import models
 
 # Create your models here.
 class City(models.Model):
-	"""docstring for City"""
 	Name = models.CharField(max_length=50)
 	CountryCode = models.CharField(max_length=50)
 	Population = models.CharField(max_length=50)
@@ -12,7 +11,6 @@ class City(models.Model):
 		return u'%s %s %s' % (self.Name, self.CountryCode, self.Population)
 
 class Country(models.Model):
-	"""docstring for ClassName"""
 	Name = models.CharField(max_length=50)
 	Code = models.CharField(max_length=50)
 	Population = models.CharField(max_length=50)

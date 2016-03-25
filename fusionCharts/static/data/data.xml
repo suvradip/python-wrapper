@@ -1,0 +1,7 @@
+<chart caption="Top 5 Stores by Sales" subcaption="Last month" yaxisname="Sales (In USD)" numberprefix="$" palettecolors="#0075c2" bgcolor="#ffffff" showborder="0" showcanvasborder="0" useplotgradientcolor="0" plotborderalpha="10" placevaluesinside="1" valuefontcolor="#ffffff" showaxislines="1" axislinealpha="25" divlinealpha="10" aligncaptionwithcanvas="0" showalternatevgridcolor="0" captionfontsize="14" subcaptionfontsize="14" subcaptionfontbold="0" tooltipcolor="#ffffff" tooltipborderthickness="0" tooltipbgcolor="#000000" tooltipbgalpha="80" tooltipborderradius="2" tooltippadding="5">
+    <set label="Bakersfield Central" value="880000" />
+    <set label="Garden Groove harbour" value="730000" />
+    <set label="Los Angeles Topanga" value="590000" />
+    <set label="Compton-Rancho Dom" value="520000" />
+    <set label="Daly City Serramonte" value="330000" />
+</chart>

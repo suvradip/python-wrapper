@@ -14,6 +14,6 @@ urlpatterns = [
     url(r'^dictExample/', dictExample.fc_dict, name='fc_dict'),
     url(r'^xmlDictExample/', xmlDictExample.fc_xmldict, name='fc_dictxml'),
     url(r'^db/', databaseExample.fc_db, name='fc_db'),
-    url(r'^country/$', drilldownExample.fc_db, name='fc_drilldown'),
-    url(r'^country/DrillDown/', drilldownExample.fc_drilldown, name='drilldown_1'),
+    url(r'^drilldown/$', drilldownExample.fc_drilldown, name='fc_drilldown'),
+
 ]
